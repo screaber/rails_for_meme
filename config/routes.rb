@@ -1,4 +1,6 @@
 RailForMeme::Application.routes.draw do
+  resources :tweets
+
   resources :memes
 
   # The priority is based upon order of creation:
