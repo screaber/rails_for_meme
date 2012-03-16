@@ -1,0 +1,27 @@
+<h1>Listing memes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Mean</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @memes.each do |meme| %>
+  <tr>
+    <td><%= meme.name %></td>
+    <td><%= meme.image %></td>
+    <td><%= meme.mean %></td>
+    <td><%= link_to 'Show', meme %></td>
+    <td><%= link_to 'Edit', edit_meme_path(meme) %></td>
+    <td><%= link_to 'Destroy', meme, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meme', new_meme_path %>

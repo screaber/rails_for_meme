@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @meme.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @meme.image %>
+</p>
+
+<p>
+  <b>Mean:</b>
+  <%= @meme.mean %>
+</p>
+
+
+<%= link_to 'Edit', edit_meme_path(@meme) %> |
+<%= link_to 'Back', memes_path %>
